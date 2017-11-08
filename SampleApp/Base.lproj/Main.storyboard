@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-c8-oUH" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULz-SK-K8P">
+                                <rect key="frame" x="267" y="36" width="92" height="30"/>
+                                <state key="normal" title="With Padding"/>
+                                <connections>
+                                    <action selector="withPaddingOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5b-uh-NEx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBZ-eA-9Io">
+                                <rect key="frame" x="137" y="36" width="114" height="30"/>
+                                <state key="normal" title="Without Padding">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="withoutPaddingOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkg-Wy-0od"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-zd-dP6">
+                                <rect key="frame" x="229" y="624" width="130" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="mapView With Padding"/>
+                                <connections>
+                                    <action selector="mapViewWithPaddingOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbo-JU-kWC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xw0-eB-egS">
+                                <rect key="frame" x="64" y="624" width="149" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="mapView Without Padding"/>
+                                <connections>
+                                    <action selector="mapViewWithoutPaddingOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6I-Fa-q8j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h0M-c8-oUH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6Nw-bT-Y0o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ov-zd-dP6" secondAttribute="trailing" constant="16" id="7tD-rU-2uV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6ov-zd-dP6" secondAttribute="bottom" constant="16" id="82X-Li-WbI"/>
+                            <constraint firstItem="h0M-c8-oUH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9nC-JS-8k3"/>
+                            <constraint firstItem="wBZ-eA-9Io" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Dyn-s9-gXO"/>
+                            <constraint firstItem="ULz-SK-K8P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Sfv-J7-jlk"/>
+                            <constraint firstItem="h0M-c8-oUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xgp-2D-I7x"/>
+                            <constraint firstItem="6ov-zd-dP6" firstAttribute="leading" secondItem="xw0-eB-egS" secondAttribute="trailing" constant="16" id="ZCt-4k-uXW"/>
+                            <constraint firstItem="ULz-SK-K8P" firstAttribute="leading" secondItem="wBZ-eA-9Io" secondAttribute="trailing" constant="16" id="akQ-2Z-Juk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ULz-SK-K8P" secondAttribute="trailing" constant="16" id="bbD-gB-iyx"/>
+                            <constraint firstItem="h0M-c8-oUH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dEd-nI-Ll1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xw0-eB-egS" secondAttribute="bottom" constant="16" id="p1l-xJ-Caz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="h0M-c8-oUH" id="PtF-K4-sE4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
